@@ -1,0 +1,25 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: complexpod
+  labels:
+    app: complexpod
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+    ports:
+      - name: app
+        containerPort: 80
+    env:
+      - name: CURRENT_EXERCISE_VERSION
+        value: LESSON_04
+  - name: hpa-example
+    image: k8s.gcr.io/hpa-example
+    ports:
+      - name: app
+        containerPort: 3000
+    env:
+      - name: CURRENT_EXERCISE_VERSION
+        value: LESSON_04
