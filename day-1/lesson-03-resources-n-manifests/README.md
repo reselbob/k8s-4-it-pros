@@ -24,5 +24,31 @@ spec:
         value: LESSON_03
 ```
 
-To inspect container type,`kubectl exec -it simplepod sh`
+#Applying the manifest
+
+• To create the pod declaratively, type:
+
+`kubectl apply -f simplepod.yaml`
+
+• To see the state of the pod, type:
+
+`kubectl get pod simplepod`
+
+• To learn the details of the pod, type:
+
+`kubectl describe pod simplepod`
+
+• To get to the command line of the only container in the pod, type,
+
+`kubectl exec -it simplepod sh`
+
+• To exit the container, type:
+
+`exit`
+
+• To delete the pod, type:
+
+`kubectl delete pod simplepod`
+
+
 

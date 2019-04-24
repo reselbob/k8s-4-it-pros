@@ -12,7 +12,7 @@ kubectl config view
 
 View the current context
 ```bash
-kubectl config current-contex
+kubectl config current-context
 ```
 
 Switch the context
