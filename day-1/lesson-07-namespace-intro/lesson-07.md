@@ -3,6 +3,7 @@
 The manifest: 
 
 ```yaml
+---
 kind: Namespace
 apiVersion: v1
 metadata:
@@ -10,7 +11,6 @@ metadata:
   labels:
     name: code-district
 
----
 apiVersion: v1
 kind: Pod
 metadata:
@@ -23,7 +23,7 @@ spec:
   - name: pinger
     image: reselbob/pinger
     ports:
-        containerPort: 3000
+      - containerPort: 3000
     env:
       - name: CURRENT_EXERCISE_VERSION
         value: LESSON_07
