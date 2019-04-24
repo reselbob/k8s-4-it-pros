@@ -49,6 +49,78 @@ Search for, `replicas: 1` under `spec` and change to, `replicas: 4`
 
 `cat /mnt/data/test_file.txt`
 
+## Manifests
+
+### Persistent Volume Manifest
+```yaml
+
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: sticky-pv-volume
+  labels:
+    type: local
+spec:
+  storageClassName: manual
+  capacity:
+    storage: 10Mi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/mnt/data"
+
+```
+
+### Persistent Volume Claim Manifest
+```yaml
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: sticky-pv-claim
+spec:
+  storageClassName: manual
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 2Mi
+
+```
+
+
+###  Deployment Manifest
+```yaml
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: stickyreaderwriter
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: stickyreaderwriter
+  template:
+    metadata:
+      labels:
+        app: stickyreaderwriter
+    spec:
+      volumes:
+        - name: sticky-pv-storage
+          persistentVolumeClaim:
+           claimName: sticky-pv-claim
+      containers:
+        - name: stickyreaderwriter
+          image: reselbob/stickyreaderwriter:v1
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8112
+              name: "http-server"
+          volumeMounts:
+            - mountPath: "/mydata"
+              name: sticky-pv-storage
+
+```
+
 ## Application Code
 
 ```javascript
