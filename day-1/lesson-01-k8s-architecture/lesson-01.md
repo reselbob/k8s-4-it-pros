@@ -28,3 +28,7 @@ A container resides inside a pod. The container is the lowest level of a micro-s
 The Kube-proxy is an implementation of a network proxy and a load balancer, and it supports the service abstraction along with other networking operation. It is responsible for routing traffic to the appropriate container based on IP and port number of the incoming request.
 ### cAdvisor
 cAdvisor is an agent that monitors and gathers resource usage and performance metrics such as CPU, memory, file and network usage of containers on each node.
+
+#Topology
+
+![Topology](topology.png)
