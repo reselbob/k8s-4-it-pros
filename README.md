@@ -12,6 +12,8 @@
 
 ### Day 1
 
+**Working at Katacoda** [here](https://katacoda.com/courses/kubernetes/playground)
+
 * Lesson 1: Review of Containers
 * Lesson 2: K8S Architecture
 * Lesson 3: Context and Configs
@@ -24,6 +26,8 @@
 * Lesson 10: Persistent Volumes
 
 ### Day 2
+
+**Working on the Learner's Laptop**
 
 * Lesson 11: Installing Virtual Box
 * Lesson 12: Working with Minikube

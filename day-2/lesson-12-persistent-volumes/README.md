@@ -1,6 +1,6 @@
 # Persistent Volumes
 
-![Persistent Volumes](./images/PersistentVolumes.jpeg)
+![Persistent Volumes](images/PersistentVolumes.jpeg)
 
 ## Set up the storage
 `cd /mnt`
