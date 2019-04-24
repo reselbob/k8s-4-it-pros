@@ -261,7 +261,7 @@ spec:
 ```
 
 
-**Service with NodePoat yaml (service-node-port.yaml)**
+**Service with NodePort yaml (service-node-port.yaml)**
 
 ```yaml
 apiVersion: v1
