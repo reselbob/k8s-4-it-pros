@@ -11,30 +11,34 @@ kind: Pod
 metadata:
   labels:
     test: liveness
-  name: liveness-http
+  name: liveness-exec
 spec:
   containers:
   - name: liveness
-    image: k8s.gcr.io/liveness
+    image: k8s.gcr.io/busybox
     args:
-    - /server
+    - /bin/sh
+    - -c
+    - touch /tmp/hi.there; sleep 90; rm -rf /tmp/hi.there; sleep 600
     livenessProbe:
-      httpGet:
-        path: /healthz
-        port: 8080
-        httpHeaders:
-        - name: Custom-Header
-          value: Awesome
-      initialDelaySeconds: 3
-      periodSeconds: 3
+      exec:
+        command:
+        - cat
+        - /tmp/hi.there
+      initialDelaySeconds: 5
+      periodSeconds: 5
 ```
 
-Describe the pod:
+Take a look at the pod's status. Pay attention to the restarts:
 
-`kubectl describe pod liveness-http`
+`kubectl get pod | grep liveness-exec`
 
-Wait 10 seconds:
+Wait 90 seconds:
 
-`kubectl describe pod liveness-http`
+`kubectl describe pod liveness-exec`
 
 Now, we should see the pod failing
+
+Take a look at the restarts, again.
+
+`kubectl get pod | grep liveness-exec`
