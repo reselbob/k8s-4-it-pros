@@ -12,8 +12,8 @@ due to capacity overloads.
 
 ## Installing the Metric Server
 
-In order for HPA to work, it needs a controller that reports cluster metrics. Otherwise, it has no way of knowing that 
-the condition of the cluster is. In this lesson we'll used Kubernetes Metric Server.
+In order for HPA to work, it needs a controller that reports cluster metrics. Otherwise, it has no way of knowing what 
+the condition of the cluster is. In this lesson we'll be using Kubernetes Metric Server.
 
 We nee to install it. Metrics Server is **not** part of the general Kubernetes installation. The installing the Metrics Server is a 4 step process.
 
