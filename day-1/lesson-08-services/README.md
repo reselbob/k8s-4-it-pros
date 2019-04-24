@@ -124,12 +124,12 @@ Sorry to report you're going to fail with a `connection refused ` error.
 
 `kubectl apply -f service-node-port.yaml`
 
-**Step 5:** Take a look. Pay attention to `PORT(S)`:
+**Step 7:** Take a look. Pay attention to `PORT(S)`:
 
 `kubectl get service pinger`
 
 
-**Step 6:** Find the NodePort port for the service:
+**Step 8:** Find the NodePort port for the service:
 
 `kubectrl get service pinger`
 
@@ -141,13 +141,13 @@ pinger    NodePort   10.106.165.248   <none>        3000:31917/TCP   21m
 
 ```
 
-**Step 7:** Call the service from the host's command line using the NodePort:
+**Step 9:** Call the service from the host's command line using the NodePort:
 
 `curl http://172.17.0.24:31917`
 
 (**Remember!** The IP address of the cluster and the NodePort will vary according to the hosting environment.)
 
-The result from the call to pinger:
+The result from the `curl` call to the pinger service:
 
 ```json
 {
