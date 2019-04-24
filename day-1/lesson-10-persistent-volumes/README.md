@@ -27,7 +27,7 @@
 
 `kubectl get pods | grep stickyreaderwriter`
 
-`kubectl exec -it stickyreaderwriter_A_GUID -- sh`
+`kubectl exec -it stickyreaderwriter_A_GUID sh`
 
 `curl localhost:8112`
 
