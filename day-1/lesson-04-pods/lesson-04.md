@@ -77,7 +77,4 @@ spec:
 
 ## Delete a pod
 
-```bash
-kubectl delete pod simplepod
-
-```
+`kubectl delete pod simplepod`
