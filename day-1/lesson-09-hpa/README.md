@@ -1,10 +1,13 @@
-# Horizontal Pod Autoscaler
+# Horizontal Pod Autoscaler (HPA)
 
 ![HPA](https://d33wubrfki0l68.cloudfront.net/4fe1ef7265a93f5f564bd3fbb0269ebd10b73b4e/1775d/images/docs/horizontal-pod-autoscaler.svg)
 
 ## Installing the Metric Server
 
-The installing the Metrics Server is a 4 step process.
+In order for HPA to work, it needs a controller that reports cluster metrics. Otherwise, it has no way of knowing that 
+the condition of the cluster is. In this lesson we'll used Kubernetes Metric Server.
+
+We nee to install it. Metrics Server is **not** part of the general Kubernetes installation. The installing the Metrics Server is a 4 step process.
 
 * Get the metrics server code from GitHub
 * Add a setting in the yaml manifest file, `deploy/1.8+/metrics-server-deployment.yaml` to allow the metrics server to
@@ -125,11 +128,11 @@ The command shown above will get the web application container image from Google
 `kubectl get pod | grep hpa-demo-web`
 
 
-**Step 3:** Start a service that uses the deployment:
+**Step 4:** Start a service that uses the deployment:
 
 `kubectl expose deployment hpa-demo-web --type=NodePort`
 
-**Step 3:**  Check the service is running:
+**Step 5:**  Check the service is running:
 
 `kubectl get service | grep hpa-demo-web`
 
@@ -249,7 +252,7 @@ on the `kubectrl autoscale` command to a CPU threshold of 5%. Also, we told HPA 
 
 Give HPA 60 seconds to get applied to the deployment.
 
-**Step 3:** Take a look at the status of the recently created HPA. Execute the following command to view the status of the HPA.
+**Step 4:** Take a look at the status of the recently created HPA. Execute the following command to view the status of the HPA.
 
 `kubectl get hpa`
 
@@ -269,7 +272,7 @@ Also, you'll notice that in the output above only pod (`REPLICAS 1``) is running
 that help is needed. HPA polls the metrics server at a default value of 15 seconds in order to figure out if help is needed. When
 we take another look at HPA 8 minutes later, we get output that looks similar to this:
 
-**Step 4:** After 60 seconds have passed, take another look.
+**Step 5:** After 60 seconds have passed, take another look.
 
 `kubectl get hpa`
 
