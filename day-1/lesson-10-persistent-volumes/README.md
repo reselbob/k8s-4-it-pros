@@ -41,7 +41,7 @@
 
 Search for, `replicas: 1` under `spec` and change to, `replicas: 4`
 
-# Make a Request on a new Pod
+## Make a Request on a new Pod
 
 `kubectl exec -it stickyreaderwriter_A_GUID -- sh`
 
@@ -49,7 +49,7 @@ Search for, `replicas: 1` under `spec` and change to, `replicas: 4`
 
 `cat /mnt/data/test_file.txt`
 
-**Application Code**
+## Application Code
 
 ```javascript
 const http = require('http');
