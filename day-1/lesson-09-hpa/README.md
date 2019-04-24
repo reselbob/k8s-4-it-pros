@@ -2,6 +2,14 @@
 
 ![HPA](https://d33wubrfki0l68.cloudfront.net/4fe1ef7265a93f5f564bd3fbb0269ebd10b73b4e/1775d/images/docs/horizontal-pod-autoscaler.svg)
 
+Kubernetes Horizontal Pod Autoscaler (HPA) addresses a basic problem in distributed, container based architecture: scaling the
+computing environment up or down to meet load demand. When you apply HPA to a Kubernetes deployment or replicaset, intelligence
+in HPA will keep an eye on the CPU utilization of the pods in force. When a particular pod starts to approach a usage
+threshold, HPA will create additional pods to alleviate the load burden of the pod(s) that is reaching the utilization limit.
+
+The autoscaling capabilities of Kubernetes Horizontal Pod Autoscaler safeguard pods against runtime performance degradation
+due to capacity overloads.
+
 ## Installing the Metric Server
 
 In order for HPA to work, it needs a controller that reports cluster metrics. Otherwise, it has no way of knowing that 
