@@ -24,7 +24,7 @@ spec:
         value: LESSON_03
 ```
 
-#Applying the manifest
+# Applying the manifest
 
 • To create the pod declaratively, type:
 
