@@ -116,6 +116,10 @@ The output will look similar, but not exact. Pay attention to the` serviceAddres
 
 `curl http://172.17.0.24:3000`
 
+(Remember to use the `serverAddress` that is particular to your cluster.)
+
+Sorry to report you're going to fail with a `connection refused ` error.
+
 **Step 6:** Now let's reapply another yaml and change the service to type, `NodePort`
 
 `kubectl apply -f service-node-port.yaml`
