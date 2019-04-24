@@ -46,7 +46,7 @@ The most important thing to understand is the a service finds it implementation 
 `kubectl delete deployment deployment-demo`
 
 
-## Create a Service Declaratively
+## Create a ClusterIP Service Declaratively
 
 We're going to create a deployment declaratively. The name of the deployment is `pinger`. The pinger deployment contains a
 pod that has a single container. That container represents an HTTP server written in Node.js that responds
@@ -63,35 +63,31 @@ with information about the container's host environment. You can find the source
 
 **Step 3:** Take a look. Pay attention to `PORT(S)`:
 
-`kubectl get service | grep pinger`
+`kubectl get service pinger`
 
-**Step 4:** Now let's reapply another yaml, this time with the service of type, `NodePort`
-
-`kubectl apply -f service-node-port.yaml`
-
-**Step 5:** Take a look. Pay attention to `PORT(S)`:
-
-`kubectl get service | grep pinger`
-
-**Step 6:** Let's create an "observer deployment" and use its pod to work in the cluster:
+**Step 4:** Let's create an "observer deployment" and use its pod to work in the cluster:
 
 `kubectl run -it deployment-for-testing --image=busybox /bin/sh`
 
-**Step 7:** We can talk to the service, `pinger` using the default dns create by the internal Kubernetes DNS server:
+**Step 5:** We can talk to the service, `pinger` using the default dns create by the internal Kubernetes DNS server:
 
 `wget -q -O- http://pinger.default.svc.cluster.local:3000`
 
-**Step 8:** Exit the pod
+**Step 6:** Exit the pod
 
 `exit`
 
-We'll experiment with the service;
+## Convert the Service to NodePort
 
-**Step 9:** First we'll make it so we can talk to the cluster:
+**Step 1:** Outside of the cluster the service is not visible
+
+`wget -q -O- http://pinger.default.svc.cluster.local:3000`
+
+**Step 2:** Let's make it so we can talk to the cluster:
 
 `kubectl proxy --port=8080`
 
-**Step 10:** Let's use `curl` to talk to the Kubernetes API server:
+**Step 3 :** Let's use `curl` to talk to the Kubernetes API server:
 
 `curl http://localhost:8080/api/`
 
@@ -112,7 +108,24 @@ The output will look similar, but not exact. Pay attention to the` serviceAddres
 }
 ```
 
-**Step 11:** Find the NodePort port for the service:
+**Step 4:** Take a look at the service. Pay attention to `PORT(S)`:
+
+`kubectl get service pinger`
+
+**Step 5:** Let's try to talk to the default port `PORT(S)`:
+
+`curl http://172.17.0.24:3000`
+
+**Step 6:** Now let's reapply another yaml and change the service to type, `NodePort`
+
+`kubectl apply -f service-node-port.yaml`
+
+**Step 5:** Take a look. Pay attention to `PORT(S)`:
+
+`kubectl get service pinger`
+
+
+**Step 6:** Find the NodePort port for the service:
 
 `kubectrl get service pinger`
 
@@ -124,7 +137,7 @@ pinger    NodePort   10.106.165.248   <none>        3000:31917/TCP   21m
 
 ```
 
-**Step 12:** Call the service from the host's command line using the NodePort:
+**Step 7:** Call the service from the host's command line using the NodePort:
 
 `curl http://172.17.0.24:31917`
 
