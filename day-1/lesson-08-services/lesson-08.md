@@ -21,7 +21,7 @@ Create the deployment:
 
 Create the Service of type, `ClusterIP`:
 
-`kubectl expose deployment deployment-demo --type=ClusterIP`
+`kubectl expose deployment deployment-demo --type=NodePort`
 
 Take a look:
 
@@ -39,10 +39,16 @@ Let's delete the service:
 
 `kubectl delete service deployment-demo`
 
+`kubectl delete deployment deployment-demo`
+
 
 ## Create a Service Declaratively
 
-First, let's create the service of type, `ClusterIP`
+Create a deployment declaratively. The name of the deployment is `pinger`.
+
+`kubectl apply -f deployment.yaml`
+
+Create the service of type, `ClusterIP`
 
 `kubectl apply -f service-cluster-ip.yaml`
 
@@ -50,16 +56,16 @@ Take a look. Pay attention to `PORT(S)`:
 
 `kubectl get service | grep deployment-demo`
 
-Now let's reapply another yaml, this time with the service of type, `ClusterIP`
+Now let's reapply another yaml, this time with the service of type, `NodePort`
 
-`kubectl apply -f service-cluster-ip.yaml`
+`kubectl apply -f service-node-port.yaml`
 
 Take a look. Pay attention to `PORT(S)`:
 
-`kubectl get service | grep deployment-demo`
+`kubectl get service | grep pinger`
 
 
-Let's create an "observer pod" and use it to work in the cluster:
+Let's create an "observer deployment" and use its pod to work in the cluster:
 
 `kubectl run -it deployment-for-testing --image=busybox /bin/sh`
 
