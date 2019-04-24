@@ -23,14 +23,14 @@
 * Lesson 7: Namespaces
 * Lesson 8: Services
 * Lesson 9: Horizontal Pod Autoscaler
-* Lesson 10: Persistent Volumes
 
 ### Day 2
 
 **Working on the Learner's Laptop**
 
-* Lesson 11: Installing Virtual Box
-* Lesson 12: Working with Minikube
+* Lesson 10: Installing Virtual Box
+* Lesson 11: Working with Minikube
+* Lesson 12: Persistent Volumes
 * Lesson 13: Secrets
 * Lesson 14: Ingress
 * Lesson 15: Transport Layer Security (TLS)
