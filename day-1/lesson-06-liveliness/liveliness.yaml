@@ -11,11 +11,11 @@ spec:
     args:
     - /bin/sh
     - -c
-    - touch liveliguy; sleep 30; rm -rf liveliguy; sleep 600
+    - touch /tmp/hi.there; sleep 90; rm -rf /tmp/hi.there; sleep 600
     livenessProbe:
       exec:
         command:
         - cat
-        - liveliguy
+        - /tmp/hi.there
       initialDelaySeconds: 5
       periodSeconds: 5
