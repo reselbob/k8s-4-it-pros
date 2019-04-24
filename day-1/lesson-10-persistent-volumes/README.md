@@ -5,7 +5,11 @@
 ## Set up the storage
 `cd /mnt`
 
-`mkdir data`
+`sudo -s`
+
+`mkdir /mnt/data/`
+
+`chmod 775 /mnt/data`
 
 `touch /mnt/data/hi.there`
 
