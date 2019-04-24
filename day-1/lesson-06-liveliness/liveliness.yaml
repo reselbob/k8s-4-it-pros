@@ -3,21 +3,19 @@ kind: Pod
 metadata:
   labels:
     test: liveness
-  name: liveness-http
+  name: liveness-exec
 spec:
   containers:
   - name: liveness
-    image: k8s.gcr.io/liveness
-    ports:
-    - containerPort: 8080
+    image: k8s.gcr.io/busybox
     args:
-    - /server
+    - /bin/sh
+    - -c
+    - touch /tmp/healthy; sleep 30; rm -rf /tmp/healthy; sleep 600
     livenessProbe:
-      httpGet:
-        path: /healthz
-        port: 8080
-        httpHeaders:
-        - name: Custom-Header
-          value: Awesome
-      initialDelaySeconds: 3
-      periodSeconds: 3
+      exec:
+        command:
+        - cat
+        - /tmp/healthy
+      initialDelaySeconds: 5
+      periodSeconds: 5
