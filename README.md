@@ -1,6 +1,9 @@
 # Kubernetes for the IT Professional
 
-## Introductory Survey
+## Take the Attendee Survey
+
+Please take the survey [here](https://www.surveymonkey.com/r/MNYDKVG). The information that 
+you provide will shape the content and style of delivery of the course.
 
 
 
@@ -23,21 +26,23 @@
 * Lesson 7: Namespaces
 * Lesson 8: Services
 * Lesson 9: Horizontal Pod Autoscaler
+* Lesson 10: ConfigMaps
+
 
 ### Day 2
 
 **Working on the Learner's Laptop**
 
-* Lesson 10: Installing Virtual Box
-* Lesson 11: Working with Minikube
-* Lesson 12: Persistent Volumes
-* Lesson 13: Secrets
-* Lesson 14: Ingress
-* Lesson 15: Transport Layer Security (TLS)
-* Lesson 16: Roles Based Access Control (RBAC)
-* Lesson 17: Helm
-* Lesson 18: Creating a Cluster with KubeAdm
-* Lesson 19: Special Topics (time permitting)
+* Lesson 11: Installing Virtual Box
+* Lesson 12: Working with Minikube
+* Lesson 13: Persistent Volumes
+* Lesson 14: Secrets
+* Lesson 15: Ingress
+* Lesson 16: Transport Layer Security (TLS)
+* Lesson 17: Roles Based Access Control (RBAC)
+* Lesson 18: Helm
+* Lesson 19: Creating a Cluster with KubeAdm
+* Lesson 20: Special Topics (time permitting)
     * Rolling Update
     * Pod Affinity
     * DaemonSets
