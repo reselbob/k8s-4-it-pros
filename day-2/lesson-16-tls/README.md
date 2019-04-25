@@ -1,5 +1,16 @@
 # Kubernetes and Transport Layer Security
 
+## Keys, Users and Groups
+
+![certificate-analysis](./images/certs.jpeg)
+
+
+## Certificate Management Process in the Enterprise
+
+![Certificate Management Process](./images/rbac-process.jpeg)
+
+## Securing a Kubernetes Ingress Using TLS
+
 We're going to implement TLS on minikube with the ingress controller enabled.
 
 **Step 1:** Enable the ingress controller on minikube
