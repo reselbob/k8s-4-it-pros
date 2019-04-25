@@ -37,4 +37,8 @@
 * Lesson 16: Roles Based Access Control (RBAC)
 * Lesson 17: Helm
 * Lesson 18: Creating a Cluster with KubeAdm
-* Lesson 19: Special Topics
+* Lesson 19: Special Topics (time permitting)
+    * Rolling Update
+    * Pod Affinity
+    * DaemonSets
+    * Statefulsets
