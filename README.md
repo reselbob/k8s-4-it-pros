@@ -15,7 +15,19 @@ you provide will shape the content and style of delivery of the course.
 
 ### Day 1
 
-**Working at Katacoda** [here](https://katacoda.com/courses/kubernetes/playground)
+**Working at Katacoda** 
+
+------
+
+**During Day 1 we're going to be working** on Katacoda using its Kubernetes playground. So, you need to make sure you
+have an account on the platform. Accessing the Kubernetes playground on Katacoda is free. An added benefit of using the
+Katacoda playground is that we can refresh the Kubernetes cluster from scratch at any time. Thus, if something happens
+in your interactive environment that is weird, creating a fresh on is just a matter of reloading a web page.
+
+You can go the Katacoda web site, [here](https://katacoda.com) to register.
+
+------
+
 
 * Lesson 1: Review of Containers
 * Lesson 2: K8S Architecture
@@ -31,7 +43,7 @@ you provide will shape the content and style of delivery of the course.
 
 ### Day 2
 
-**Working on the Learner's Laptop**
+**Working on the Attendee's Laptop**
 
 * Lesson 11: Installing Virtual Box
 * Lesson 12: Working with Minikube
