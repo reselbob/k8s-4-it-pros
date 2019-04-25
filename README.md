@@ -15,9 +15,9 @@ you provide will shape the content and style of delivery of the course.
 
 ### Day 1
 
-**Working at Katacoda** 
-
 ------
+
+**Working at Katacoda** 
 
 **During Day 1 we're going to be working** on Katacoda using its Kubernetes playground. So, you need to make sure you
 have an account on the platform. Accessing the Kubernetes playground on Katacoda is free. An added benefit of using the
@@ -43,7 +43,11 @@ You can go the Katacoda web site, [here](https://katacoda.com) to register.
 
 ### Day 2
 
+------
+
 **Working on the Attendee's Laptop**
+
+------
 
 * Lesson 11: Installing Virtual Box
 * Lesson 12: Working with Minikube
