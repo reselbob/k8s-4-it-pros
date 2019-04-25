@@ -37,11 +37,11 @@ resolve to the IP address of minikube.
 
 `-keyout tls.key` is the name of the private key
 
-`-out tls.crt` is the public certificate passed in by a calling client requesting access
+`-out tls.crt` is the name of the public certificate passed in by a calling client requesting access
 
-`-subj "/CN=example.com"` indicates the  applies to the domain, `example.com`
+`-subj "/CN=example.com"` indicates the credentials apply to the domain, `example.com`
 
-`-days 365` set the certificate to be valid for 365 days
+`-days 365` sets the credentials to be valid for 365 days
 
 **Step 8:** Create the Kubernetes secret that will hold the private key and public certificate. We'll do
 this imperatively. So execute the following command.
