@@ -33,18 +33,37 @@ spec:
             - name: CURRENT_EXERCISE_VERSION
               value: LESSON_5
 ```
-List the deployment:
+**Step 1:** List the deployment:
  
 `kubectl get deployment | grep simpledeployment`
 
-List the pods:
+**Step 2:** List the pods:
 
 `kubectl get pods | grep simplepod`
 
-Describe the deployment:
+**Step 3:** Describe the deployment:
 
 `kubectl describe deployment simpledeployment`
 
-Scale the deployment up
+**Step 4:** Scale the deployment up
 
 `kubectl scale --replicas=5 deployment/simpledeployment`
+
+When a deployment is in force, it will automatically replenish pods that get accidentally nuked. Let's try an 
+experiment.
+
+Nuke a pod
+
+**Step 4:** List the pods:
+
+`kubectl get pods | grep simplepod`
+
+
+**Step 5:** Pick one and delete it
+
+`kubectl delete pod simplepod-A_GUID`
+
+**Step 6:** List the pods again. Notice that Kubernetes is replenishing the pod to the declared number of required replicas:
+
+`kubectl get pods | grep simplepod`
+

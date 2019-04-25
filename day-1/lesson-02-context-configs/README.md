@@ -1,24 +1,20 @@
 # `kubectl`
-```bash
-kubectl --version
-```
+
+**Step 1:** Get the current version of the kubectl and the API server
+
+`kubectl --version`
 
 # Clusters and Contexts in Kubernetes
 
-View the configuration using `kubectl`
-```bash
-kubectl config view
-```
+**Step 2:** View the configuration using `kubectl`
 
-View the current context
-```bash
-kubectl config current-context
-```
+`kubectl config view`
 
-Switch the context
-```bash
-kubectl config use-context #context name
-```
+**Step 3:** View the current context
+
+`kubectl config view current-context`
 
 
-```
+**Step 4:** Switch the context
+
+`kubectl config use-context #context name`
