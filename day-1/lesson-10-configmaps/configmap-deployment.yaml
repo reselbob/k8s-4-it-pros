@@ -1,0 +1,39 @@
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: configmap-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pinger
+  template:
+    metadata:
+      labels:
+        app: pinger
+    spec:
+      containers:
+        -
+          env:
+            -
+              name: CURRENT_VERSION
+              value: LESSON_10
+            -
+              name: CD_MESSAGE
+              valueFrom:
+                configMapKeyRef:
+                  key: CD_MESSAGE
+                  name: codedistrict-configmap
+            -
+              name: CD_WARNING
+              valueFrom:
+                configMapKeyRef:
+                  key: CD_WARNING
+                  name: codedistrict-configmap
+          image: reselbob/pinger:v2.1
+          imagePullPolicy: Always
+          name: pinger
+          ports:
+            -
+              containerPort: 3000

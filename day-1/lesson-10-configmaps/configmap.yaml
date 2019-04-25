@@ -1,0 +1,9 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: codedistrict-configmap
+  namespace: default
+data:
+  CD_MESSAGE: "All good things take time"
+  CD_WARNING: Beware
