@@ -6,9 +6,9 @@
 * On OSX [here](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-on-macos).
 * On Windows [here](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-on-windows).
 
-## Installing a `minikube`
+## Installing `minikube`
 
-Instruction are [here](https://kubernetes.io/docs/tasks/tools/install-minikube/#install-minikube).
+Instructions are [here](https://kubernetes.io/docs/tasks/tools/install-minikube/#install-minikube).
 
 ## Useful instructions
 
