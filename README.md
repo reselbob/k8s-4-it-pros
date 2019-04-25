@@ -24,7 +24,7 @@ have an account on the platform. Accessing the Kubernetes playground on Katacoda
 Katacoda playground is that we can refresh the Kubernetes cluster from scratch at any time. Thus, if something happens
 in your interactive environment that is weird, creating a fresh on is just a matter of reloading a web page.
 
-You can go the Katacoda web site, [here](https://katacoda.com) to register.
+You can go to the Katacoda web site, [here](https://katacoda.com) to register.
 
 ------
 
