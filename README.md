@@ -41,4 +41,4 @@
     * Rolling Update
     * Pod Affinity
     * DaemonSets
-    * Statefulsets
+    * StatefulSets
