@@ -50,26 +50,6 @@ spec:
 
 `kubectl delete pod simplepod`
 
-# Manifest
-
-```yaml
-apiVersion: v1
-kind: Pod
-metadata:
-  name: simplepod
-  labels:
-    app: simplepod
-spec:
-  containers:
-  - name: simplepod
-    image: nginx
-    ports:
-      - name: app
-        containerPort: 3000
-    env:
-      - name: CURRENT_EXERCISE_VERSION
-        value: LESSON_03
-```
 
 
 

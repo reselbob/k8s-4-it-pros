@@ -46,4 +46,4 @@ If your are trying to access an instance of minikube **running on an external ho
 
 If your are trying to access an instance of minikube **running on your machine**, from your browser
 
-`http://local:8001/api/v1/namespaces/kube-system/services/kubernetes-dashboard/proxy`
+`http://localhost:8001/api/v1/namespaces/kube-system/services/kubernetes-dashboard/proxy`
