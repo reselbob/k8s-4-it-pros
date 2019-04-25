@@ -10,7 +10,7 @@ Cute little tutorial in VirtualBox installation [here](https://www.wikihow.com/I
 
 
 
-# Google Cloud Option
+# Using an Existing Cluster on Google Cloud
 
 You will need to do a lot of set up work on [GC Kubernetes Engine](https://cloud.google.com/kubernetes-engine/). 
 However, if you already can setup a cluster in a Google Cloud Project,
