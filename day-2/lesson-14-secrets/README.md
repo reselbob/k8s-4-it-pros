@@ -19,6 +19,7 @@
 **Step 4:** Take a look at the environment variables
 
 `kubectl exec -ti simple-pod env`
+
 `kubectl exec -ti intermediate-pod env`
 
 **Step 5:** Make a deployment full of secrets
