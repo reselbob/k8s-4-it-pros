@@ -11,7 +11,7 @@ spec:
     - host: moe.info
       http:
         paths:
-        - path: /moe
+        - path: /
           backend:
             serviceName: moe
             servicePort: 3000
