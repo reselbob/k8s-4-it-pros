@@ -8,7 +8,7 @@ spec:
     serviceName: stooges
     servicePort: 80
   rules:
-    - host: moe.stooge
+    - host: moe.info
       http:
         paths:
         - path: /moe

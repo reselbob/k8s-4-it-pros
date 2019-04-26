@@ -20,7 +20,7 @@
 
 **Step 3:** Set Up the Local DNS to `stooges.info` by making an entry into `/etc/hosts`
 
-`echo "$(minikube ip) stooges.info" | sudo tee -a /etc/hosts`
+`echo "$(minikube ip) stooges.info moe.info" | sudo tee -a /etc/hosts`
 
 **Step 4:** Turn on the minikube ingress
 
