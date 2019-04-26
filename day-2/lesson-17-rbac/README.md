@@ -28,7 +28,7 @@ variable
 **Step 3:** Make a `private key` and a `certificate signing request` that applies to the user we created and the groups, `devs`
 and `tech-leads`
 
-`openssl req -new -key ${MAGIC_USER}.key -out ${MAGIC_USER}.csr -subj "/CN=${MAGIC_USER}/O=devs/O=tech-leads"`
+`openssl req -new -key "$HOME/.certs/kubernetes/minikube/${MAGIC_USER}.key -out ${MAGIC_USER}.csr -subj "/CN=${MAGIC_USER}/O=devs/O=tech-leads"`
 
 ------
 
@@ -62,7 +62,7 @@ Now we'll put on an "System Adminstrator Hat" and create the `public certificate
 
 **Step 1:** Create the `pod-access` role that allows only using `kubectl get`
 
-`kubectl apply -f pod-access-role.yaml`
+`kubectl apply -f pod-reader.yaml`
 
 **Step 2:** Create the rolebinding, `user-pod-reader` that allows the user, `dicktracy` to assume the 
 role, `pod-reader`.
@@ -77,7 +77,9 @@ role, `pod-reader`.
 
 **Step 2:** Try to create a pod in the namespace, `test`
 
-`kubectl run --generator=run-pod/v1 pinger-dk --image=reselbob/pinger:v2.1` -n test
+`kubectl run --generator=run-pod/v1 pinger-dk --image=reselbob/pinger:v2.1 -n test`
+
+You'll fail.
 
 **Step 3:** You'll fail, so let's go back to being the admin in `minikube`.
 
@@ -85,7 +87,7 @@ role, `pod-reader`.
  
 **Step 4:** Try to create a pod again
 
-`kubectl run --generator=run-pod/v1 pinger-dk --image=reselbob/pinger:v2.1` -n test
+`kubectl run --generator=run-pod/v1 pinger-dk --image=reselbob/pinger:v2.1 -n test`
 
 **Step 5:** As the `minikube` admin, take a look to see that the pod is in the namespace, `test`
 
@@ -95,7 +97,7 @@ role, `pod-reader`.
 
 `kubectl config use-context ${MAGIC_USER}@minikube`
 
-**Step 7:** As the user `dicktracy` admin, take a look to see that the pod is in the 
+**Step 7:** As the user `dicktracy`, take a look to see that the pod is in the 
 namespace, `test`
 
 `kubectl get pods -n test`
@@ -104,7 +106,7 @@ namespace, `test`
 
 `kubectl get pods --all-namespaces`
 
-**SUPRISE!**
+**SUPRISE! You can't do it. Dick Tracy does not have permission to list pods at the cluster scope.**
 
 
 
