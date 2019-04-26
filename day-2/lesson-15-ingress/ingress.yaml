@@ -8,18 +8,25 @@ spec:
     serviceName: stooges
     servicePort: 80
   rules:
-  - host: stooges.info
-    http:
-      paths:
-      - path: /moe
-        backend:
-          serviceName: moe
-          servicePort: 3000
-      - path: /larry
-        backend:
-          serviceName: larry
-          servicePort: 3000
-      - path: /curly
-        backend:
-          serviceName: curly
+    - host: moe.stooge
+      http:
+        paths:
+        - path: /moe
+          backend:
+            serviceName: moe
+            servicePort: 3000
+    - host: stooges.info
+      http:
+        paths:
+        - path: /moe
+          backend:
+            serviceName: moe
+            servicePort: 3000
+        - path: /larry
+          backend:
+            serviceName: larry
+            servicePort: 3000
+        - path: /curly
+          backend:
+            serviceName: curly
           servicePort: 3000
