@@ -1,6 +1,8 @@
-#Working with Ingress
+# Working with Kubernetes Ingress
 
 ![Ingress](./images/ingress.png)
+
+## Implementing an Ingress
 
 **Step 1:** Create the Deployments
 
@@ -30,7 +32,10 @@
 
 `kubectl apply -f ingress.yaml`
 
-**Step 6:** Clean up
+
+## Clean Up
+
+**Step 1:** Clean up
 
 `kubectl delete service moe`
 
