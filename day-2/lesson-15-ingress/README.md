@@ -2,6 +2,42 @@
 
 ![Ingress](./images/ingress.png)
 
+## The Ingress Manifest
+
+```yaml
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: stooges-ingress
+spec:
+  backend:
+    serviceName: stooges
+    servicePort: 80
+  rules:
+    - host: moe.info
+      http:
+        paths:
+        - path: /
+          backend:
+            serviceName: moe
+            servicePort: 3000
+    - host: stooges.info
+      http:
+        paths:
+        - path: /moe
+          backend:
+            serviceName: moe
+            servicePort: 3000
+        - path: /larry
+          backend:
+            serviceName: larry
+            servicePort: 3000
+        - path: /curly
+          backend:
+            serviceName: curly
+            servicePort: 3000
+```
+
 ## Implementing an Ingress
 
 **Step 1:** Create the Deployments
