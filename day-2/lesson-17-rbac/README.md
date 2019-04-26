@@ -18,6 +18,10 @@
 
 ![Configuring Role and RoleBinding Manifests](./images/roles-bindings.png)
 
+## Review the Certificate Creation Process
+
+![Certificate Creation Process](./images/rbac-process.jpeg)
+
 ## Creating the Certificates
 
 **Step 1:** Declare the name of the Kubernetes user we're going to support by setting it to an environment
