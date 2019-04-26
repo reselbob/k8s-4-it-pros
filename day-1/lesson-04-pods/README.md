@@ -1,5 +1,7 @@
 # Pods
 
+![K8S Pod](./images/k8s-node.jpeg)
+
 ## Create a pod with one container declaratively
 
 ```bash

@@ -1,6 +1,6 @@
 # Kubernetes Architecture
 
-![Kubernetes Architecture](Kubernetes-arch.png)
+![Kubernetes Architecture](./images/Kubernetes-arch.jpeg)
 
 ## The Control Plane
 
@@ -31,4 +31,4 @@ cAdvisor is an agent that monitors and gathers resource usage and performance me
 
 #Topology
 
-![Topology](topology.png)
+![Topology](./images/topology.png)
