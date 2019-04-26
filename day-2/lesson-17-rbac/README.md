@@ -14,6 +14,10 @@
 
 ![RBAC RoleBindings](./images/RBAC-RoleBinding.jpeg)
 
+## Configuring Role and RoleBinding Manifests
+
+![Configuring Role and RoleBinding Manifests](./images/roles-bindings.png)
+
 ## Creating the Certificates
 
 **Step 1:** Declare the name of the Kubernetes user we're going to support by setting it to an environment
@@ -58,7 +62,7 @@ Now we'll put on an "System Adminstrator Hat" and create the `public certificate
  
  `kubectl get ns`
  
-## Create Roles and RoleBindings
+## Create Roles and RoleBindings for a User
 
 **Step 1:** Create the `pod-access` role that allows only using `kubectl get`
 
@@ -109,5 +113,21 @@ namespace, `test`
 **SUPRISE! You can't do it. Dick Tracy does not have permission to list pods at the cluster scope.**
 
 
+## Create Roles and RoleBindings for Groups
 
+**Step 1:** Switch back to being the admin in `minikube`.
 
+ `kubectl config use-context minikube
+
+**Step 2:** Create the `simple-pod-developer` role that allows creating and listing pods
+
+`kubectl apply -f simple-dev-role.yaml`
+
+**Step 3:** Create the rolebinding, `simple-pod-developers` that allows the group, `devs` to assume the 
+role, `simple-pod-developer`.
+
+`kubectl apply -f simple-dev-rolebinding.yaml`
+
+**Step 4:** Now, switch back to be `dicktracy`
+
+`kubectl config use-context ${MAGIC_USER}@minikube`
