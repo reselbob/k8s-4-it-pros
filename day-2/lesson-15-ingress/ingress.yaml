@@ -6,9 +6,9 @@ metadata:
 spec:
   backend:
     serviceName: stooges
-    servicePort: 3000
+    servicePort: 80
   rules:
-  - host:
+  - host: stooges.info
     http:
       paths:
       - path: /moe

@@ -17,6 +17,8 @@
 
 `kubectl expose deployment curly --target-port=3000 --type=NodePort`
 
+`echo "$(minikube ip) stooges.info" | sudo tee -a /etc/hosts`
+
 #Turn on the minikube ingress
 
 `minikube addons enable ingress`
