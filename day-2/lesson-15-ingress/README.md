@@ -22,7 +22,7 @@
 `minikube addons enable ingress`
 
 #Apply the Ingress
-`kubectl appy -f ingress.yaml`
+`kubectl apply -f ingress.yaml`
 
 ## Clean up
 
