@@ -40,6 +40,8 @@ You can go to the Katacoda web site, [here](https://katacoda.com) to register.
 * Lesson 9: Horizontal Pod Autoscaler
 * Lesson 10: ConfigMaps
 
+**Take the Day 1 Attendee Assessment [here](https://www.surveymonkey.com/r/JB733HN).**
+
 
 ### Day 2
 
