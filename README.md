@@ -2,7 +2,7 @@
 
 ## Take the Attendee Survey
 
-Please take the survey [here](https://www.surveymonkey.com/r/MNYDKVG). The information that 
+Please take the Attendee Survey **[here](https://www.surveymonkey.com/r/MNYDKVG)**. The information that 
 you provide will shape the content and style of delivery of the course.
 
 
