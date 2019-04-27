@@ -22,7 +22,7 @@ you provide will shape the content and style of delivery of the course.
 **During Day 1 we're going to be working** on Katacoda using its Kubernetes playground. So, you need to make sure you
 have an account on the platform. Accessing the Kubernetes playground on Katacoda is free. An added benefit of using the
 Katacoda playground is that we can refresh the Kubernetes cluster from scratch at any time. Thus, if something happens
-in your interactive environment that is weird, creating a fresh on is just a matter of reloading a web page.
+in your interactive environment that is weird, creating a fresh one is just a matter of reloading a web page.
 
 You can go to the Katacoda web site, **[here](https://katacoda.com)** to register.
 
