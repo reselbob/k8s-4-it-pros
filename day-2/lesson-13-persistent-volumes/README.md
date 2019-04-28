@@ -70,9 +70,19 @@ Search for, `replicas: 1` under `spec` and change to, `replicas: 4`
 
 `kubectl exec -it stickyreaderwriter_A_GUID -- sh`
 
+`curl localhost:8112`
+
 ## Check Activity in Storage
 
+SSH into minikube:
+
+`minikube ssh`
+
 `cat /mnt/data/test_file.txt`
+
+Exit minikube
+
+`exit`
 
 ## Manifests
 
