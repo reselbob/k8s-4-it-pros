@@ -20,6 +20,11 @@ SSH into minikube:
 
 `ls /mnt/data`
 
+Exit minikube
+
+`exit`
+
+
 ## Create the Persistent Volume
 
 `kubectl apply -f sticky-pv.yaml`
