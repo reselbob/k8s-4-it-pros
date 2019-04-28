@@ -2,7 +2,7 @@
 
 
 **Educational Objective:** The educational objective of this exercise is to allow attendees to
-have the hands-on experience of creating a pod from from a docker image on DockerHub.
+have the hands-on experience of creating and exploring a pod from from a docker image on DockerHub.
 
 **About the Docker image**
 
@@ -21,10 +21,10 @@ runs on `port 3001`.
   
  **The Assignment**
  
- You are assignment, should you decide to accept it, is to create a Pod on MiniKube with the
+ Your assignment, should you decide to accept it, is to create a Pod on MiniKube with the
  name, `secret-messenger` that uses the image, `reselbob/secret-message:v1.0` to create a container that
- also has the name, `simple-messenger1=`. Also, when you create the pod, inject the
- environment variable, `DEVELOPER_NAME` into the container assigning your developer name to the environment variable.
+ also has the name, `simple-messenger1`. Also, when you create the pod, inject the
+ environment variable, `DEVELOPER_NAME` into the container and assign your developer name to the environment variable.
  
  Then after the pod is created, access container using the command, 
  
