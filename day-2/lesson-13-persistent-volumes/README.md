@@ -47,7 +47,18 @@ Exit minikube
 
 ## Check Activity in Storage
 
+SSH into minikube:
+
+`minikube ssh`
+
+Look at the file
+
 `cat /mnt/data/test_file.txt`
+
+Exit minikube
+
+`exit`
+
 
 ## Scale Up the Number of Pods in the Deployment
 
