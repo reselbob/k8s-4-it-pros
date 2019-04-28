@@ -36,7 +36,7 @@ variable
 **Step 3:** Make a `private key` and a `certificate signing request` that applies to the user we created and the groups, `devs`
 and `tech-leads`
 
-`openssl req -new -key "~/.minikube/${MAGIC_USER}.key" -out ~/.minikube/${MAGIC_USER}.csr -subj "/CN=${MAGIC_USER}/O=devs/O=tech-leads"`
+`openssl req -new -key ~/.minikube/${MAGIC_USER}.key -out ~/.minikube/${MAGIC_USER}.csr -subj "/CN=${MAGIC_USER}/O=devs/O=tech-leads"`
 
 ------
 
@@ -50,7 +50,7 @@ Now we'll put on an "System Adminstrator Hat" and create the `public certificate
 
 **Step 5:** Set the certificate as credential a key
 
-`kubectl config set-credentials ${MAGIC_USER}@minikube --client-certificate="~/.minikube/${MAGIC_USER}.crt" --client-key="~/.minikube/${MAGIC_USER}.key" --embed-certs=true`
+`kubectl config set-credentials ${MAGIC_USER}@minikube --client-certificate=~/.minikube/${MAGIC_USER}.crt --client-key=~/.minikube/${MAGIC_USER}.key --embed-certs=true`
 
 **Step 6:** Create a new Kubernetes context
 
@@ -135,3 +135,7 @@ role, `simple-pod-developer`.
 **Step 4:** Now, switch back to be `dicktracy`
 
 `kubectl config use-context ${MAGIC_USER}@minikube`
+
+Run this command: 
+
+`kubectl run --generator=run-pod/v1 pinger-dk --image=reselbob/pinger:v2.1 -n devs`
