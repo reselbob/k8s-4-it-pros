@@ -21,6 +21,6 @@ spec:
           - name: CURRENT_VERSION
             value: {{.Values.currentVersion}}
           - name: STOOGE
-            value: I am Moe, no relation to Curly"
+            value: "I am Moe, no relation to Curly"
           ports:
             - containerPort: {{.Values.containerPort}}

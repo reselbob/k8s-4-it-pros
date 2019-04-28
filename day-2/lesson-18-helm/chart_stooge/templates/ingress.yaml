@@ -5,7 +5,7 @@ metadata:
   name: stoogeingress
 spec:
   backend:
-    serviceName: moe
+    serviceName: stooge
     servicePort: {{.Values.servicePort}}
   rules:
   - host:
