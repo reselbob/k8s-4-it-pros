@@ -2,25 +2,22 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: moe
+  name: nginx
 spec:
-  replicas: {{.Values.scale}}
+  replicas: 3
   selector:
     matchLabels:
-      app: moe
+      app: nginx
   template:
     metadata:
       labels:
-        app: moe
+        app: nginx
     spec:
       containers:
-        - image: {{.Values.image}}
-          imagePullPolicy: Always
-          name: moe
-          env:
-          - name: CURRENT_VERSION
-            value: {{.Values.currentVersion}}
-          - name: STOOGE
-            value: "I am Moe, no relation to Curly"
+        - image: "nginx:1.13"
+          name: nginx
           ports:
-            - containerPort: {{.Values.containerPort}}
+            - containerPort: 80
+          env:
+            - name: CURRENT_EXERCISE_VERSION
+              value: {{.Values.lesson}}

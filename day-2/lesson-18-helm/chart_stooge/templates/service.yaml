@@ -2,12 +2,13 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: moe
+  name: nginx
 spec:
   selector:
-    app: moe
+    app: nginx
   ports:
     - name: main
       protocol: TCP
-      port: {{.Values.servicePort}}
-      targetPort: {{.Values.serviceTargetPort}}
+      port: 80
+      targetPort: 80
+
