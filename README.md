@@ -5,7 +5,9 @@
 Please take the Attendee Survey **[here](https://www.surveymonkey.com/r/MNYDKVG)**. The information that 
 you provide will shape the content and style of delivery of the course.
 
+## Courseware Repository on GitHub
 
+`git clone https://github.com/reselbob/k8s-4-it-pros.git`
 
 ## Scope of Course Content
 

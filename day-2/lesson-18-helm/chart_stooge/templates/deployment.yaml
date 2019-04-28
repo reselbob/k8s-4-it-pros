@@ -14,7 +14,7 @@ spec:
         app: moe
     spec:
       containers:
-        - image: {{.Values.image}
+        - image: {{.Values.image}}
           imagePullPolicy: Always
           name: moe
           env:

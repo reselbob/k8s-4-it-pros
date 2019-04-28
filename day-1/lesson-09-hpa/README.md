@@ -186,11 +186,11 @@ Now that you are in the test container, let's create a little looping program in
 
 **Step 3:** Execute the following command to create bash file that will container the looping program.
 
-`echo "while true; do wget -q -O- http://hpa-demo-web.default.svc.cluster.local ; done" > loops.sh`{{execute T2}}
+`echo "while true; do wget -q -O- http://hpa-demo-web.default.svc.cluster.local ; done" > loops.sh`
 
 **Step 4:**  We need to give it execute permissions. Execute on the following command:
 
-`chmod +x /loops.sh`{{execute T2}}
+`chmod +x /loops.sh`
 
 **Step 5:** Let's put a burden on the pod, `hpa-demo-web` by running the bash script. 
 
