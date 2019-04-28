@@ -50,7 +50,7 @@ Now we'll put on an "System Adminstrator Hat" and create the `public certificate
 
 **Step 5:** Set the certificate as credential a key
 
-`kubectl config set-credentials ${MAGIC_USER}@minikube --client-certificate=~/.minikube/${MAGIC_USER}.crt --client-key=~/.minikube/${MAGIC_USER}.key --embed-certs=true`
+`kubectl config set-credentials ${MAGIC_USER}@minikube --client-certificate=/home/reselbob/.minikube/${MAGIC_USER}.crt --client-key=${MAGIC_USER}.key --embed-certs=true`
 
 **Step 6:** Create a new Kubernetes context
 
