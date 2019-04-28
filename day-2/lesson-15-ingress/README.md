@@ -111,6 +111,6 @@ Windows users follow the process described here **[here](https://www.addictiveti
 
 ------
 
-`kubectl delete ingress stooges`
+`kubectl delete ingress stooges-ingress`
 
 ------
