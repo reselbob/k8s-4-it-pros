@@ -27,3 +27,19 @@
 `kubectl apply -f secret-deployment.yaml`
 
 `kubectl expose deployment simplesecret --target-port=3000 --type=NodePort`
+
+
+**Secret in a manifest
+
+```yaml
+apiVersion: v1    
+
+kind: Secret
+metadata:
+     name: test-secret
+     namespace: default
+type: Opaque
+data:
+    server.crt: SERVER_CRT
+    server.key: SERVER_KEY
+```
