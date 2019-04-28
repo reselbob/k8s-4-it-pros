@@ -56,9 +56,14 @@ spec:
 
 `kubectl expose deployment curly --target-port=3000 --type=NodePort`
 
-**Step 3:** Set Up the Local DNS to `stooges.info` by making an entry into `/etc/hosts`
+**Step 3:** Set Up the Local DNS to `moe.info` and `stooges.info` by making an entry into `/etc/hosts`
+
+Linux and MAC users, do this step do this:
 
 `echo "$(minikube ip) stooges.info moe.info" | sudo tee -a /etc/hosts`
+
+Windows users follow the process described here **[here](https://www.addictivetips.com/windows-tips/modify-the-hosts-file-on-windows-10/)**.
+
 
 **Step 4:** Turn on the minikube ingress
 
@@ -68,6 +73,15 @@ spec:
 
 `kubectl apply -f ingress.yaml`
 
+**Step 6:** Take a look
+
+`curl http://moe.info`
+
+`curl http://stooges.info/moe`
+
+`curl http://stooges.info/larry`
+
+`curl http://stooges.info/curly`
 
 ## Clean Up
 

@@ -29,20 +29,34 @@ chart_01
 
 ## Chart Operations for a Simple Chart
 
-**Step 1:** Execute a chart
+**Step 1:** Execute a release
 
-`helm install --name=chart_01`
+`helm install chart_01 --name=simplechart`
 
-**Step 2:** Delete a chart
+**Step 2:** List the release
 
-`helm delete chart_01`
+`helm list`
+
+**Step 3:** Try the release out. Find the IP address of minikube
+
+`minikube ip`
+
+Call the URL of the release
+
+`curl http://$(minikube ip)`
+
+**Step 4:** Delete a release
+
+`helm delete simplechart --purge`
+
+
 
 ## Chart Operations for a Chart Using Value Variables
 
-The Helm chart's file system
+The Helm chart's file system for Stooges
 
 ```bash
-chart_stooge/
+chart_stooges/
 ├── Chart.yaml
 ├── templates
 │   ├── deployment.yaml
@@ -54,19 +68,36 @@ chart_stooge/
 Contents of the file, `values.yaml`
 
 ```yaml
-image: reselbob/pingerv2.1
-containerPort: 3000
-currentVersion: LESSON_18
-scale: 2
-servicePort: 80
-serviceTargetPort: 3000
+replicas: 2
+lesson: LESSON_18_HELM
 author: reselbob
 ```
 
-**Step 1:** Execute a chart
+**Step 1:** If you do not have your domain name in `/etc/hosts` Linux and MAC users, do this step do this:
 
-`helm install --name=chart_stooge`
+`echo "$(minikube ip) stooges.info moe.info" | sudo tee -a /etc/hosts`
 
-**Step 2:** Delete a chart
+Windows users follow the process described here **[here](https://www.addictivetips.com/windows-tips/modify-the-hosts-file-on-windows-10/)**.
 
-`helm delete chart_stooge`
+**Step 2:** Execute a release 
+
+`helm install chart_stooges --name=stooges`
+
+**Step 3:** Take a look
+
+`curl http://moe.info`
+
+`curl http://stooges.info/moe`
+
+`curl http://stooges.info/larry`
+
+`curl http://stooges.info/curly`
+
+**Step 2:** Delete a release
+
+`helm delete stooges --purge`
+
+
+**Addendum:** Delete and purge all releases
+
+`helm del $(helm ls --all --short) --purge`
