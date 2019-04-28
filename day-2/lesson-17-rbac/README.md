@@ -48,9 +48,9 @@ Now we'll put on an "System Adminstrator Hat" and create the `public certificate
 
 `openssl x509 -req -in ~/.minikube/${MAGIC_USER}.csr -CA ~/.minikube/ca.crt -CAkey ~/.minikube/ca.key -CAcreateserial -out ~/.minikube/${MAGIC_USER}.crt -days 500`
 
-**Step 5:** Set the certificate as credential a key
+**Step 5:** Set the certificate as credential a key, replace `myname` with your home directory name
 
-`kubectl config set-credentials ${MAGIC_USER}@minikube --client-certificate=/home/reselbob/.minikube/${MAGIC_USER}.crt --client-key=${MAGIC_USER}.key --embed-certs=true`
+`kubectl config set-credentials ${MAGIC_USER}@minikube --client-certificate=/home/nyname/.minikube/${MAGIC_USER}.crt --client-key=${MAGIC_USER}.key --embed-certs=true`
 
 **Step 6:** Create a new Kubernetes context
 
