@@ -32,7 +32,7 @@ runs on `port 3001`.
  
  Then run the command, 
  
- `wget -q -O- http://localhost:30001`
+ `wget -q -O- http://localhost:3001`
  
  to learn the secret message.
  
