@@ -54,7 +54,7 @@ const port = process.env.PORT || 3001;
 
 const handleRequest = function(request, response) {
     const developerName = process.env.DEVELOPER_NAME || 'DEVELOPER NAME UNKNOWN';
-    const secretMessage = `Patience is a virtue, ${developerName}`;
+    const secretMessage = `Sorry, ${developerName} I m not going to tell you the secret message. Do the execise.`;
 
     console.log(`Received request for URL: ${request.url} at ${new Date()}`);
     console.log(`Sending secret message, ${secretMessage}`);
