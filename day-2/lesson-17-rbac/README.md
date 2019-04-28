@@ -36,7 +36,7 @@ variable
 **Step 3:** Make a `private key` and a `certificate signing request` that applies to the user we created and the groups, `devs`
 and `tech-leads`
 
-`openssl req -new -key "$~/.minikube/${MAGIC_USER}.key" -out ${MAGIC_USER}.csr -subj "/CN=${MAGIC_USER}/O=devs/O=tech-leads"`
+`openssl req -new -key "~/.minikube/${MAGIC_USER}.key" -out ${MAGIC_USER}.csr -subj "/CN=${MAGIC_USER}/O=devs/O=tech-leads"`
 
 ------
 
