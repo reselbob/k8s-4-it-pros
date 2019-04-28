@@ -31,7 +31,7 @@ variable
 
 **Step 2:** Generate the public ssl key
 
-`openssl genrsa -out ~/.minikube/${MAGIC_USER}.key 2048`
+`openssl genrsa -out ${MAGIC_USER}.key 2048`
 
 **Step 3:** Make a `private key` and a `certificate signing request` that applies to the user we created and the groups, `devs`
 and `tech-leads`
