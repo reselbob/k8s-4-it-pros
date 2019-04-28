@@ -2,6 +2,6 @@ image: reselbob/pinger:v2.1
 containerPort: 3000
 currentVersion: LESSON_18
 scale: 2
-servicePort: 80
+servicePort: 3000
 serviceTargetPort: 3000
 author: reselbob
