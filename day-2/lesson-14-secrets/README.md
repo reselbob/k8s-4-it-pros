@@ -29,6 +29,8 @@
 `kubectl expose deployment simplesecret --target-port=3000 --type=NodePort`
 
 
+
+
 **Secret in a manifest**
 
 ```yaml
