@@ -2,10 +2,10 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: nginx
+  name: oker
 spec:
   selector:
-    app: nginx
+    app: oker
   ports:
     - name: main
       protocol: TCP

@@ -2,10 +2,26 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: nginx-ingress
+  name: oker-ingress
   annotations:
     http.port: "443"
 spec:
   backend:
-    serviceName: nginx
+    serviceName: oker
     servicePort: 80
+rules:
+  - host:
+    http:
+      paths:
+      - path: /moe
+        backend:
+          serviceName: oker
+          servicePort: 80
+      - path: /larry
+        backend:
+          serviceName: oker
+          servicePort: 80
+      - path: /curly
+        backend:
+          serviceName: oker
+          servicePort: 80
