@@ -6,7 +6,7 @@ have the hands-on experience of creating and exploring a pod from from a docker 
 
 **About the Docker image**
 
-The Docker container image is on GitHub and is named `reselbob/secret-message:v1.0`.
+The Docker container image is on GitHub and is named `reselbob/secret-messenger:v1.0`.
 
 The container images is a web server that emits a response with a secret message. The web server
 runs on `port 3001`.
@@ -22,7 +22,7 @@ runs on `port 3001`.
  **The Assignment**
  
  Your assignment, should you decide to accept it, is to create a Pod on MiniKube with the
- name, `secret-messenger` that uses the image, `reselbob/secret-message:v1.0` to create a container that
+ name, `secret-messenger` that uses the image, `reselbob/secret-messenger:v1.0` to create a container that
  also has the name, `simple-messenger1`. Also, when you create the pod, inject the
  environment variable, `DEVELOPER_NAME` into the container and assign your developer name to the environment variable.
  
