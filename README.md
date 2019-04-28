@@ -40,7 +40,6 @@ You can go to the Katacoda web site, **[here](https://katacoda.com)** to registe
 * Lesson 7: Namespaces
 * Lesson 8: Services
 * Lesson 9: Horizontal Pod Autoscaler
-* Lesson 10: ConfigMaps
 
 **Take the Day 1 Attendee Assessment [here](https://www.surveymonkey.com/r/JB733HN).**
 
@@ -53,6 +52,8 @@ You can go to the Katacoda web site, **[here](https://katacoda.com)** to registe
 
 ------
 
+* Day 2 Review Exercise
+* Lesson 10: ConfigMaps
 * Lesson 11: Installing Virtual Box
 * Lesson 12: Working with Minikube
 * Lesson 13: Persistent Volumes
@@ -67,3 +68,5 @@ You can go to the Katacoda web site, **[here](https://katacoda.com)** to registe
     * Pod Affinity
     * DaemonSets
     * StatefulSets
+
+**Take the Day 2 Attendee Assessment [here](https://www.surveymonkey.com/r/MSVVP9W)**
