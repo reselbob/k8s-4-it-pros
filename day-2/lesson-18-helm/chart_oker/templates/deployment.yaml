@@ -14,7 +14,7 @@ spec:
         app: oker
     spec:
       containers:
-        - image: 8s.gcr.io/hpa-example
+        - image: k8s.gcr.io/hpa-example
           name: oker
           ports:
             - containerPort: 80
