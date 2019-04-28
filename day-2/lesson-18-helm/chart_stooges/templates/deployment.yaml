@@ -19,7 +19,7 @@ spec:
           name: curly
           env:
           - name: CURRENT_VERSION
-            value: {{Values.lesson}}
+            value: {{.Values.lesson}}
           - name: STOOGE
             value: "I am Curly"
           ports:
@@ -45,7 +45,7 @@ spec:
           name: larry
           env:
           - name: CURRENT_VERSION
-            value: {{Values.lesson}}
+            value: {{.Values.lesson}}
           - name: STOOGE
             value: "I am Larry"
           ports:
@@ -71,7 +71,7 @@ spec:
           name: moe
           env:
           - name: CURRENT_VERSION
-            value: {{Values.lesson}}
+            value: {{.Values.lesson}}
           - name: STOOGE
             value: "I am Moe"
           ports:
