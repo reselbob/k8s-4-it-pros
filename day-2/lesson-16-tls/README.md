@@ -61,7 +61,7 @@ this imperatively. So execute the following command.
 
 **Step 9:**: Update the ingress to include the certificate information and binding to `example.com`.
 
-`kubectl apply -f ingress-update.yaml`
+`kubectl apply -f update-ingress.yaml`
 
 **Step 10:**: Try to access the nginx server using `curl` as you did before. You'll fail.
 
