@@ -71,7 +71,7 @@ this imperatively. So execute the following command.
 
 `curl --cacert tls.crt https://example.com`
 
-##Clean Up
+## Clean Up
 
 Delete the deployment
 
