@@ -3,6 +3,11 @@
 ![Persistent Volumes](images/PersistentVolumes.jpeg)
 
 ## Set up the storage
+
+SSH into minikube:
+
+`minikube ssh`
+
 `cd /mnt`
 
 `sudo -s`
