@@ -46,7 +46,7 @@ Now we'll put on an "System Adminstrator Hat" and create the `public certificate
 
 **Step 4:** Create the public certificate
 
-`openssl x509 -req -in ~/.minikube/${MAGIC_USER}.csr -CA ~/.minikube/ca.crt -CAkey ~/.minikube/ca.key -CAcreateserial -out ~/.minikube/${MAGIC_USER}.crt -days 500`
+`openssl x509 -req -in ${MAGIC_USER}.csr -CA ~/.minikube/ca.crt -CAkey ~/.minikube/ca.key -CAcreateserial -out ~/.minikube/${MAGIC_USER}.crt -days 500`
 
 **Step 5:** Set the certificate as credential a key, replace `myname` with your home directory name
 
