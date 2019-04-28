@@ -1,4 +1,4 @@
-image: reselbob/pingerv2.1
+image: reselbob/pinger:v2.1
 containerPort: 3000
 currentVersion: LESSON_18
 scale: 2
