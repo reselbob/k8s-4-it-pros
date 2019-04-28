@@ -6,7 +6,7 @@ have the hands-on experience of creating and exploring a pod from from a docker 
 
 **About the Docker image**
 
-The Docker container image is on GitHub and is named `reselbob/secret-messenger:v1.0`.
+The Docker container image is on DockerHub and is named `reselbob/secret-messenger:v1.0`.
 
 The container images is a web server that emits a response with a secret message. The web server
 runs on `port 3001`.
